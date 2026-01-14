@@ -1,8 +1,24 @@
-# 🚀 Dockerized Express.js + PostgreSQL App (Prisma ORM)
+# 🐳 Docker Learning Project: Express + PostgreSQL
 
-This project was created as a **learning-focused backend application** to understand how to build, configure, and run an **Express.js API with PostgreSQL** using **Prisma ORM**, fully **dockerized with Docker and Docker Compose**.
+This project was created **purely to learn and practice Docker**.
 
-The main goal of this project is to practice **real-world backend setup** and learn how Docker helps create consistent and portable development environments.
+The main focus of this project is **containerization**, **Docker workflows**, and **multi-service orchestration** using **Docker and Docker Compose**.  
+The application logic is intentionally kept simple so that the attention stays on Docker concepts rather than backend implementation details.
+
+---
+
+## 🎯 Purpose of the Project
+
+The goal of this project is to:
+
+- Learn how Docker works in a real project
+- Containerize an existing application
+- Run multiple services using Docker Compose
+- Understand Docker networking between containers
+- Use volumes for data persistence
+- Manage environment variables in a Dockerized setup
+
+This project is **not about learning backend development** — it is focused entirely on **Docker**.
 
 ---
 
@@ -17,13 +33,15 @@ The main goal of this project is to practice **real-world backend setup** and le
 
 ---
 
-## 🎯 Project Objectives
+## 🐳 Docker Setup Overview
 
-Through this project, I aimed to:
+This project uses **Docker Compose** to run multiple containers:
 
-- Set up an Express.js backend with PostgreSQL
-- Use Prisma ORM for type-safe database access
-- Learn Docker fundamentals by containerizing a backend application
-- Run multiple services (API + Database) using Docker Compose
-- Avoid local environment dependency issues
-- Practice a production-like backend architecture
+- **API container**
+  - Node.js application
+  - Prisma ORM
+- **Database container**
+  - PostgreSQL
+  - Persistent volume for data storage
+
+All services communicate through Docker’s internal network.
